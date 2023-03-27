@@ -1,0 +1,75 @@
+
+* {
+  box-sizing: border-box;
+  padding: unset;
+  margin: unset;
+}
+
+html {
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 1.4rem;
+  margin: unset;
+  color: var(--text);
+  background-color: #000;
+  box-sizing: border-box;
+  background-image: url(https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/account-login.jpg);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position-y: 80px;
+  font-family: "Roboto", sans-serif;
+  background-attachment: fixed;
+}
+
+
+:root{
+  --text: #afb7b9;
+  --dark-background: #161616;
+  --border: #D3D3D3;
+  --border-ruller: rgba(223, 223, 223, 0.149);
+  --border-container: rgba(171, 168, 168, 0.25);
+  --gold: #E7AC3C;
+  --background-container: rgba(0, 0, 0, .5);
+  
+  --light-grey: #fffbfb;
+  --grey: #202229;
+  --ash: #33353d;
+  --light-ash: rgba(52,55,65,0.9);
+  --dark-ash: #343741;
+  --dark: #18191d;
+  --light: #fff;
+  --orange: #f0ab2e;
+  --dark-orange: rgba(240,171,46,0.9);
+  --darkest-orange: rgba(240,171,46,0.1);
+  --menu-grey: #32353f;
+  --tooltip-dark: #18191d;
+  --blue: #5ac0ec;
+  --light-blue: rgba(90,192,236,0.4);
+  --dark-blue: #0b739f;
+  --maroon: #ec7651;
+  --red: #f0452e;
+  --pink-red: #c2264c;
+  --pink-red-dark: rgba(194,38,76,0.1);
+  --green: #48b145;
+  --opaque-white: hsla(0,0%,100%,0.3);
+  --placeholder-color: hsla(0,0%,100%,0.1);
+  --table-tile: #31343d;
+}

@@ -1,0 +1,83 @@
+header {
+    height: 80px;
+    width: 100%;
+    background-color: var(--dark-background);
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    gap: 1.3em;
+}
+
+#site-logo {
+    margin: 0;
+    width: calc((100% - 70px)/2);
+    max-width: 156px;
+    height: 80px;
+    background-color: #252525;
+    background-image: url("//d2s2kb1tq1008e.cloudfront.net/assets/pubg/header_logo-95b12629c92aed55e7cc40109d836d0d071362a49e88323b5d003ef583a0a876.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    display: block;
+    position: relative;
+}
+
+#site-logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #fff;
+}
+
+#mainMenu {
+    margin: 0;
+    float: left;
+    text-transform: uppercase;
+    height: 100%;
+
+}
+
+#mainMenu .main-menu {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0rem;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#mainMenu .main-menu li {
+    font-size: 1.4rem;
+    line-height: 1em;
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 0;
+}
+
+#mainMenu .main-menu li>a {
+    font-family: "Teko", "Oswald", sans-serif;
+    letter-spacing: 0.005em;
+    bottom: -2px;
+    color: #adadad;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 80px;
+    padding: 5px;
+}
+
+
+.menu-top {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.clearfix {
+    display: block
+}

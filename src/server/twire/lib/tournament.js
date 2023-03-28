@@ -69,8 +69,6 @@ async function Load() {
         data: tournamentList
     }
 
-    console.log(result);
-
     return result
 }
 
@@ -82,9 +80,10 @@ exports.save = async function Save() {
     try {
         const value = await Load()
         tournaments = value
-        console.log('saved!');
+        console.log('tournaments was saved!');
     } catch (error) {
         console.warn(error)
+        throw Error(error)
     }
 }
 

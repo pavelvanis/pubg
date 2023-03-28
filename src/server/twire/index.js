@@ -1,5 +1,5 @@
 
-const tournaments = require('./lib/tournaments')
+const tournaments = require('./lib/tournament')
 
 
 async function saveTournaments() {

@@ -69,6 +69,8 @@ async function Load() {
         data: tournamentList
     }
 
+    console.log(result);
+
     return result
 }
 
@@ -83,7 +85,6 @@ exports.save = async function Save() {
         console.log('saved!');
     } catch (error) {
         console.warn(error)
-        throw Error(error)
     }
 }
 

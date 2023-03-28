@@ -1,0 +1,25 @@
+.container {
+    margin-top: 1rem;
+    text-align: center;
+    min-height: 60px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.active {
+    background: inherit;
+    border: solid 1px var(--border);
+    border-bottom: none;
+    padding: 0.8em 1.2em;
+    color: whitesmoke;
+}
+
+.option {
+    background: inherit;
+    padding: 0.8em 1.2em;
+    border-bottom: solid 1px var(--border);
+}

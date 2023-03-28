@@ -15,6 +15,15 @@ const PORT = process.env.PORT || 8080
 saveTournaments()
 saveSeasons()
 
+// Set CORS policy 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 app.use(express.static(path.join(__dirname, 'public', 'build')));
 
@@ -31,9 +40,9 @@ app.get('/api/stats/tournaments', async (req, res) => {
   res.json(tournaments)
 })
 
-/* app.get('*', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'build', 'index.html'));
-}); */
+});
 
 // Listening at port ..
 app.listen(PORT, () => {

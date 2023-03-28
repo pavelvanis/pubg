@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  color: var(--text);
   padding: unset;
   margin: unset;
 }
@@ -13,14 +14,17 @@ html {
   height: 100%;
 }
 
+button {
+  color: var(--text);
+  border: none;
+}
+
 a {
   text-decoration: none;
 }
 
 main {
-  position: absolute;
-  top: 80px;
-  width: 100%;
+  padding-top: 80px;
 }
 
 body {

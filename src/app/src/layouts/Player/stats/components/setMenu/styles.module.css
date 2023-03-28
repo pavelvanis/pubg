@@ -1,0 +1,80 @@
+.container {
+    text-transform: uppercase;
+    padding: 1rem 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+    border-bottom: solid 1px var(--border-ruller);
+}
+
+.container>h1 {
+    font-size: 32px;
+    text-shadow: rgba(175, 183, 185, .3) 3px 2px;
+
+}
+.col {
+    font-size: 42px;
+}
+
+.container>h1>.season {
+    color: rgb(113, 142, 183);
+    text-shadow: rgba(113, 142, 183, .3) 3px 2px;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+}
+
+.options  button {
+    padding: .6em 1em;
+    background-color: inherit;
+    border: solid .5px var(--border);
+    text-transform: uppercase;
+}
+
+
+.options button.active {
+    border: solid 2px var(--border);
+    box-shadow: rgba(255, 255, 255, .6) 2px 2px 8px;
+
+}
+
+.seasonButton {
+    position: relative;
+}
+
+.activeSeasonButton {
+    position: relative;
+    border: solid 2px var(--border) !important;
+    box-shadow: rgba(255, 255, 255, .4) 2px 2px 8px;
+}
+
+.seasonContainer {
+    position: relative;
+}
+
+.seasonList {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: var(--dark-background);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .options{ 
+        margin-bottom: 2rem;
+    }
+  }

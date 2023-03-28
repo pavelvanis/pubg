@@ -1,0 +1,15 @@
+
+
+.player {
+    color: var(--gold);
+    font-size: 34px;
+    width: min-content;
+    text-shadow: rgba(126, 110, 19, 0.878) 2px 2px;
+    margin: 0 auto;
+    margin-bottom: .8em;
+}
+
+.optionsMenu {
+    background-color: var(--background-container);
+    border: solid 1.5px var(--border-container);
+}

@@ -3,7 +3,7 @@ header {
     width: 100%;
     background-color: var(--dark-background);
     position: fixed;
-    z-index: 100;
+    z-index: 99;
     display: flex;
     gap: 1.3em;
 }

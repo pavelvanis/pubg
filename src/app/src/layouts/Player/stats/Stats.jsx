@@ -90,10 +90,11 @@ function getData(name, id, season, gameMode, mode) {
 function GetSeasons() {
     return new Promise((resolve, reject) => {
         axios
-            .get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
+            //.get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
+            .get(`/api/season`)
             .then(res => {
                 resolve(res.data.data)
-                console.log(res);
+                console.log(res.data);
             })
             .catch(err => reject(err))
     })

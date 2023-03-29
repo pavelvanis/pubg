@@ -61,12 +61,12 @@ function GameModeButtons({ gameMode, setGameMode }) {
 
 
 function SeasonList({ season, seasonList, setSeason }) {
-  const list = seasonList.filter(s => s.value != season.value)
+  // const list = seasonList.filter(s => s.value != season.value)
   if (seasonList) {
     return (
       <div className={styles.seasonList}>
         {
-          list.map(s => (
+          seasonList.map(s => (
             <button key={s.value} onClick={() => setSeason(s)} >Season {s.value}</button>
           ))
         }
@@ -79,8 +79,10 @@ function SeasonList({ season, seasonList, setSeason }) {
 function GetSeasons() {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
+      //.get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
+      .get(`/api/season`)
       .then(res => {
+        console.log('seasons was loaded in setMenu');
         resolve(res.data.data)
       })
       .catch(err => reject(err))

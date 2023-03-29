@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import { PlayerContext } from '../PlayerContent'
 import SetMenu from './components/setMenu/SetMenu'
@@ -39,6 +39,10 @@ export default function Stats() {
             })
             .catch(err => console.error(err))
     }, [])
+
+    useEffect(() => {
+        console.log('knedla was here');
+    },[player.name])
 
     useEffect(() => {
         if (load.current === true) {

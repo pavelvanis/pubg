@@ -11,7 +11,7 @@ export default function PlayerLayout() {
   const toastRef = useRef()
   const [status, setStatus] = useState(null)
 
-  const loadedToast = useRef({loaded: false, id: null})
+  const loadedToast = useRef({ loaded: false, id: null })
 
   const addToast = (toast) => {
     toastRef.current.addToast(toast)
@@ -19,7 +19,6 @@ export default function PlayerLayout() {
   const removeToast = (id) => {
     toastRef.current.removeToast(id)
   }
-
 
   const handleStatus = async () => {
     const serverStatus = await getStatusSync();
@@ -36,16 +35,14 @@ export default function PlayerLayout() {
     else {
       if (serverStatus && loadedToast.current.loaded) {
         removeToast(loadedToast.current.id)
-        loadedToast.current = {loaded: false, id: null}
+        loadedToast.current = { loaded: false, id: null }
       }
     }
-
     setStatus(serverStatus);
   }
 
   useEffect(() => {
     if (load.current === true) handleStatus();
-
     const interval = setInterval(() => {
       handleStatus()
     }, 7000)

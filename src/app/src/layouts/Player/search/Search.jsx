@@ -1,19 +1,21 @@
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import { getId } from '../player';
+import { PubgApiStatus } from '../PlayerLayout';
 import './styles.css'
 
-export default function Search({ setPlayer, status }) {
+export default function Search({ setPlayer }) {
 
   const [name, setName] = useState()
   const [error, setError] = useState({ error: false, message: null })
+  const pubgStatus = useContext(PubgApiStatus)
 
   const submitPlayer = (e) => {
     e.preventDefault()
     console.log(name);
-    console.log(status);
-    if(!status) {
+    console.log(pubgStatus);
+    if(!pubgStatus) {
       setError({error: true, message: 'Pubg api server is not working'})
       return
     }

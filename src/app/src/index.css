@@ -4,6 +4,7 @@
   color: var(--text);
   padding: unset;
   margin: unset;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -28,6 +29,12 @@ button:hover{
 
 a {
   text-decoration: none;
+  color: var(--text);
+  transition: color 0.5s ease;
+}
+
+a:hover{
+  color: rgb(255, 255, 255);
 }
 
 main {
@@ -52,7 +59,7 @@ body {
 
 
 :root{
-  --text: #afb7b9;
+  --text: #949282;
   --dark-background: #161616;
   --border: #D3D3D3;
   --border-ruller: rgba(223, 223, 223, 0.149);
@@ -84,3 +91,5 @@ body {
   --placeholder-color: hsla(0,0%,100%,0.1);
   --table-tile: #31343d;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap');

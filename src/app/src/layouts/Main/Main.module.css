@@ -1,0 +1,21 @@
+.container {
+    margin: 2rem;
+    padding: 1rem;
+    
+}
+
+.header {
+    text-align: center;
+}
+
+.header > h1 {
+    margin: .5rem 0;
+}
+
+.header > p {
+    margin-top: 1rem;
+    font-weight: 300;
+    letter-spacing: .037em;
+    font-family: "Teko", "Oswald", sans-serif
+
+}

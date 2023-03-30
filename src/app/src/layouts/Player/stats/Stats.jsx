@@ -41,7 +41,6 @@ export default function Stats() {
     }, [])
 
     useEffect(() => {
-        console.log('knedla was here');
     },[player.name])
 
     useEffect(() => {

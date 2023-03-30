@@ -15,16 +15,23 @@
 .search > form > input {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
 
     min-width: 220px;
-    max-width: 350px;
+    max-width: 340px;
+    width: 100%;
     min-height: 2em;
     border: solid 1px var(--border);
-    border-radius: 1rem;
+    border-radius: 1.2rem;
     background-color: rgba(0, 0, 0, .3);
-    padding: .3em .8em;
+    padding: .6em 2em;
     caret-color: var(--border);
-    color: var(--text)
+    color: var(--text);
+    transition: .5s ease;
+    font-size: 16px;
+}
+
+.search > form > input:hover {
+    border: solid 2px white;
 }

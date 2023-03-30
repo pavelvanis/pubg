@@ -5,7 +5,7 @@ import axios from 'axios'
 import { ToastPortal } from '../../my_components/notification'
 import PlayerContent from './PlayerContent'
 
-export const PubgApiStatus = createContext(true)
+export const PubgApiStatus = createContext()
 
 export default function PlayerLayout() {
 
@@ -46,12 +46,11 @@ export default function PlayerLayout() {
   useEffect(() => {
     if (load.current === true) {
       handleStatus();
-      console.log('laodedafaef');
       console.log(status);
     }
     const interval = setInterval(() => {
       handleStatus()
-    }, 3000)
+    }, 2000)
 
     return () => {
       clearInterval(interval)
@@ -63,7 +62,7 @@ export default function PlayerLayout() {
   return (
     <main>
       <PubgApiStatus.Provider value={status}>
-        <PlayerContent/>
+        <PlayerContent />
       </PubgApiStatus.Provider>
       <ToastPortal ref={toastRef} />
     </main>

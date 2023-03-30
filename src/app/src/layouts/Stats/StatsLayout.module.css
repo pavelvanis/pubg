@@ -1,0 +1,13 @@
+.notWorking {
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    border: solid 2px var(--border-container);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: .15rem .15rem .4rem rgba(128, 128, 128, 0.474);
+}
+
+

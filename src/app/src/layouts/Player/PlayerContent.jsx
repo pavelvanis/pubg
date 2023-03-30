@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react'
 
 import Search from './search/Search'
 import Stats from './stats/Stats.jsx'
+import styles from './Player.module.css'
 
 export const PlayerContext = createContext({ name: null, id: null })
 
@@ -20,7 +21,10 @@ export default function PlayerContent({ status }) {
   else {
     return (
       <PlayerContext.Provider value={player}>
-        <Search setPlayer={setPlayer} status={status} />
+        <div className={styles.container}>
+          <p> Submit player to input</p>
+          <Search setPlayer={setPlayer} status={status} />
+        </div>
       </PlayerContext.Provider>
     )
   }

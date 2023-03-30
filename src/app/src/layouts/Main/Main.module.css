@@ -1,7 +1,6 @@
 .container {
     margin: 2rem;
-    padding: 1rem;
-    
+    padding: 1rem;   
 }
 
 .header {
@@ -10,12 +9,13 @@
 
 .header > h1 {
     margin: .5rem 0;
+    color: var(--text-light);
 }
 
 .header > p {
     margin-top: 1rem;
-    font-weight: 300;
-    letter-spacing: .037em;
-    font-family: "Teko", "Oswald", sans-serif
-
+    font-weight: 200;
+    letter-spacing: .04em;
+    font-family: "Teko", "Oswald", sans-serif;
+    color: var(--text-light);
 }

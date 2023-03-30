@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 
+import styles from './StatsLayout.module.css'
+
 export default function StatsLayout() {
 
   const load = useRef(false)
@@ -15,7 +17,9 @@ export default function StatsLayout() {
 
   return (
     <main>
-      StatsLayout
+      <div className='container'>
+        <p className={styles.notWorking}>This page is not working for now</p>
+      </div>
     </main>
   )
 }

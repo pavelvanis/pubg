@@ -79,8 +79,8 @@ function SeasonList({ season, seasonList, setSeason }) {
 function GetSeasons() {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
-      //.get(`/api/season`)
+      //.get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
+      .get(`/api/season`)
       .then(res => {
         console.log('seasons was loaded in setMenu');
         resolve(res.data.data)

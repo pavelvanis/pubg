@@ -7,7 +7,7 @@ import StatsContent from './components/statsContent/StatsContent'
 
 import StatsClass from './stats.js'
 
-import styles from './styles.module.css'
+import styles from './PlayerStats.module.css'
 import axios from 'axios'
 
 export default function Stats() {

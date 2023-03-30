@@ -2,7 +2,7 @@
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
 
-import styles from './styles.module.css'
+import styles from './PlayerSetMenu.module.css'
 
 export default function SetMenu({ setSeason, season, gameMode, setGameMode }) {
 

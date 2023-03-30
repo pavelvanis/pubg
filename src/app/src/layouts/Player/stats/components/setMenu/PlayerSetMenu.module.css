@@ -5,7 +5,7 @@
     flex-direction: row;
     gap: 30px;
     justify-content: space-around;
-    border-bottom: solid 1px var(--border-ruller);
+
 }
 
 .container>h1 {

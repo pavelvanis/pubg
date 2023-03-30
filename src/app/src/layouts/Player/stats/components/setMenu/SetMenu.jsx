@@ -15,8 +15,6 @@ export default function SetMenu({ setSeason, season, gameMode, setGameMode, seas
     setSeason(s)
   }
 
-  seasonList.reverse()
-
   useEffect(() => {
     function handleClickOutside(event) {
       if (rootRef.current && !rootRef.current.contains(event.target)) setActive(false)
@@ -58,7 +56,6 @@ function GameModeButtons({ gameMode, setGameMode }) {
 
 function SeasonList({ season, seasonList, setSeason }) {
   const list = seasonList.filter(s => s.value != season.value)
-  console.log(list);
   if (list) {
     return (
       <div className={styles.seasonList}>

@@ -31,8 +31,10 @@ export default function Stats() {
     }
 
     useEffect(() => {
-        GetSeasons() 
+        GetSeasons()
             .then(res => {
+                res.reverse()
+                console.log(res);
                 setSeasonsList(res)
                 const currentSeason = res.filter(s => s.isCurrent)
                 setSeason(currentSeason[0])
@@ -41,12 +43,13 @@ export default function Stats() {
     }, [])
 
     useEffect(() => {
-    },[player.name])
+        const currentSeason = seasonList.filter(s => s.isCurrent)
+        setSeason(currentSeason[0])
+    }, [player.name])
 
     useEffect(() => {
         if (load.current === true) {
             getStats()
-            console.log('loaded');
         }
 
         return () => load.current = true

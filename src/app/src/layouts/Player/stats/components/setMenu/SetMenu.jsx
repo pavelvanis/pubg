@@ -4,18 +4,18 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import styles from './PlayerSetMenu.module.css'
 
-export default function SetMenu({ setSeason, season, gameMode, setGameMode }) {
+export default function SetMenu({ setSeason, season, gameMode, setGameMode, seasonList }) {
 
-  const load = useRef(false)
   const rootRef = useRef(null);
 
   const [active, setActive] = useState(false)
-  const [seasonList, setSeasonList] = useState()
 
   const submitSeason = (s) => {
     setActive(false)
     setSeason(s)
   }
+
+  seasonList.reverse()
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -28,23 +28,6 @@ export default function SetMenu({ setSeason, season, gameMode, setGameMode }) {
     };
 
   }, [rootRef]);
-
-  useEffect(() => {
-    if (load.current === true) {
-      GetSeasons()
-        .then(res => {
-          setSeasonList(res.reverse())
-          return res
-        })
-        .then(res => {
-          if (!season) {
-            const s = res.filter(s => s.value !== season.value)
-            setSeason(s)
-          }
-        })
-    }
-    return () => load.current = true
-  }, [])
 
   return (
     <div className={styles.container}>
@@ -75,6 +58,7 @@ function GameModeButtons({ gameMode, setGameMode }) {
 
 function SeasonList({ season, seasonList, setSeason }) {
   const list = seasonList.filter(s => s.value != season.value)
+  console.log(list);
   if (list) {
     return (
       <div className={styles.seasonList}>
@@ -87,19 +71,4 @@ function SeasonList({ season, seasonList, setSeason }) {
     )
   }
 }
-
-
-function GetSeasons() {
-  return new Promise((resolve, reject) => {
-    axios
-      .get(`${process.env.REACT_APP_SERVER}:${process.env.REACT_APP_PORT}/api/season`)
-      //.get(`/api/season`)
-      .then(res => {
-        console.log('seasons was loaded in setMenu');
-        resolve(res.data.data)
-      })
-      .catch(err => reject(err))
-  })
-}
-
 
